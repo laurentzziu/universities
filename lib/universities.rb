@@ -1,5 +1,17 @@
-require "universities/version"
+# frozen_string_literal: true
+
+require 'universities/version'
+
+require 'universities/up_dupable'
+require 'universities/request'
+require 'universities/entity'
 
 module Universities
-  # Your code goes here...
+  def self.get
+    Request.new
+  end
+
+  def self.get_all
+    Request.new.fetch
+  end
 end
