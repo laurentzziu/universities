@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/laurentzziu/universities.svg?branch=master)](https://travis-ci.org/laurentzziu/universities)
+
 # Universities
 
 This is a Ruby gem for querying [Hipo/university-domains-list](https://github.com/Hipo/university-domains-list).
@@ -20,7 +22,51 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Get all universities
+```ruby
+# returns an array with all Universities
+# each element is an instance of Universities::Entity
+Universities.get_all
+```
+
+### Filter
+Available filters: `country`, `name`.
+
+**Important!** In order for the filtered request to return results, you need to call `#fetch`.
+
+#### Filter by *country*
+```ruby
+Universities.get.country('Romania').fetch
+# alias_method: 
+Universities.get.by_country('Romania').fetch
+```
+
+#### Filter by *name*
+```ruby
+Universities.get.name('Politehnica').fetch
+# alias_method: 
+Universities.get.by_name('Politehnica').fetch
+```
+
+#### Filter by *country* and *name*
+```ruby
+Universities.get.country('Romania').name('Politehnica').fetch
+# alias_method: 
+Universities.get.by_country('Romania').by_name('Politehnica').fetch
+```
+
+#### University::Entity 
+Example
+
+```ruby
+#<Universities::Entity:0x00007fbd4312c408
+  @alpha_two_code="RO",
+  @country="Romania",
+  @domains=["pub.ro"],
+  @name="University Politehnica of Bucharest",
+  @state_province=nil,
+  @web_pages=["http://www.pub.ro/"]>
+```
 
 ## Development
 
