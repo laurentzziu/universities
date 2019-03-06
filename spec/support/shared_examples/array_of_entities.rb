@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 shared_examples 'array of entities' do
   it 'returns an array of entities' do
     expect(subject).to be_kind_of(Array)
