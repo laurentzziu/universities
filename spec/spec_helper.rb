@@ -7,6 +7,12 @@ require 'webmock/rspec'
 
 require_relative 'support/shared_examples/array_of_entities'
 
+require 'simplecov'
+require 'simplecov-console'
+
+SimpleCov.formatter = SimpleCov::Formatter::Console
+SimpleCov.start
+
 WebMock.disable_net_connect!(allow: 'universities.hipolabs.com')
 
 RSpec.configure do |config|

@@ -1,12 +1,12 @@
 RSpec.describe Universities::Entity do
   let(:university_hash) do
     {
-      "web_pages": ['http://www.pub.ro/'],
-      "alpha_two_code": 'RO',
-      "state-province": nil,
-      "country": 'Romania',
-      "domains": ['pub.ro'],
-      "name": 'University Politehnica of Bucharest'
+      'web_pages' => ['http://www.pub.ro/'],
+      'alpha_two_code' => 'RO',
+      'state-province' => nil,
+      'country' => 'Romania',
+      'domains' => ['pub.ro'],
+      'name' => 'University Politehnica of Bucharest'
     }
   end
 

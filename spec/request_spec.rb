@@ -39,7 +39,7 @@ RSpec.describe Universities::Request do
         request.fetch
       end
     end
-    
+
     include_examples 'array of entities'
   end
 end

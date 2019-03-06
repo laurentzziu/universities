@@ -23,17 +23,17 @@ module Universities
       dup_and_update(country: word)
     end
 
-    alias_method :by_country, :country
+    alias by_country country
 
     def name(word)
       dup_and_update(name: word)
     end
 
-    alias_method :by_name, :name
+    alias by_name name
 
     private
 
-    BASE_URL = 'http://universities.hipolabs.com/search'
+    BASE_URL = 'http://universities.hipolabs.com/search'.freeze
 
     def params
       hash = {}

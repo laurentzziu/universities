@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/laurentzziu/universities.svg?branch=master)](https://travis-ci.org/laurentzziu/universities)
+[![Gem Version](https://badge.fury.io/rb/universities.svg)](https://rubygems.org/gems/universities)
+[![Maintainability](https://api.codeclimate.com/v1/badges/06e863f836bf7faeaeb5/maintainability)](https://codeclimate.com/github/laurentzziu/universities/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/06e863f836bf7faeaeb5/test_coverage)](https://codeclimate.com/github/laurentzziu/universities/test_coverage)
 
 # Universities
 
@@ -37,25 +40,25 @@ Available filters: `country`, `name`.
 #### Filter by *country*
 ```ruby
 Universities.get.country('Romania').fetch
-# alias_method: 
+# alias_method:
 Universities.get.by_country('Romania').fetch
 ```
 
 #### Filter by *name*
 ```ruby
 Universities.get.name('Politehnica').fetch
-# alias_method: 
+# alias_method:
 Universities.get.by_name('Politehnica').fetch
 ```
 
 #### Filter by *country* and *name*
 ```ruby
 Universities.get.country('Romania').name('Politehnica').fetch
-# alias_method: 
+# alias_method:
 Universities.get.by_country('Romania').by_name('Politehnica').fetch
 ```
 
-#### University::Entity 
+#### University::Entity
 Example
 
 ```ruby
