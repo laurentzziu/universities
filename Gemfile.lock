@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    universities (0.1.0)
+    universities (0.1.1)
       activesupport
       httparty
 
