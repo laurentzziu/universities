@@ -1,6 +1,1 @@
-Metrics/LineLength:
-  Max: 120
-Style/Documentation:
-  Enabled: false
-Layout/EndOfLine:
-  Enabled: false
+inherit_from: https://raw.githubusercontent.com/laurentzziu/utils/master/gems/.rubocop.yml
