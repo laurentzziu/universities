@@ -35,12 +35,12 @@ RSpec.describe Universities do
     end
 
     include_examples 'array of entities'
-    
+
     it 'returns entities with name matching `Politehnica`' do
       expect(subject.first.name).to match(/Politehnica/)
     end
   end
-  
+
   describe 'when requesting universities filtered by name (e.g. `Politehnica`) and country (e.g. `Romania`)' do
     subject do
       VCR.use_cassette('universities/Politehnica+Romania', allow_playback_repeats: true) do
@@ -49,11 +49,11 @@ RSpec.describe Universities do
     end
 
     include_examples 'array of entities'
-    
+
     it 'returns entities with name matching `Politehnica`' do
       expect(subject.first.name).to match(/Politehnica/)
     end
-    
+
     it 'returns entities with country `Romania`' do
       expect(subject.first).to have_attributes(country: 'Romania', alpha_two_code: 'RO')
     end

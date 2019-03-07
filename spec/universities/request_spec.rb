@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 RSpec.describe Universities::Request do
-  let(:request) { Universities::Request.new }
+  let(:request) { described_class.new }
 
   describe 'when calling filters' do
     it 'responds to #country' do

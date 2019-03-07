@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Universities::Entity do
   let(:university_hash) do
     {
